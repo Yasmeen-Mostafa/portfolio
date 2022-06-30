@@ -41,6 +41,11 @@ export default function NavBar() {
                 Counter
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to="/todo" className="nav-link">
+                TODO
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

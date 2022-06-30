@@ -8,6 +8,7 @@ import Home from "./pages/home";
 import Counter from "./pages/counter";
 import CounterTitle from "./components/Counter.component";
 import { Details } from "./pages/product-details";
+import Todo from "./pages/todo/Todo";
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="store/:id" element={<Details />} />
+        <Route path="/todo" element={<Todo />} />
       </Routes>
     </Router>
   );

@@ -36,7 +36,7 @@ export const Details = () => {
         </div>
       ) : (
         // <h5>...Loading</h5>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center mt-5 ">
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
