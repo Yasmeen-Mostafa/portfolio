@@ -1,10 +1,12 @@
 import React from "react";
-
-export default function Increment({ IncreamentCounterButton }) {
+import { increment } from "../Redux/features/toDo";
+import { useDispatch } from "react-redux/es/hooks/useDispatch";
+export default function Increment() {
+  const dispatchIncrement = useDispatch();
   return (
     <div>
       <button
-        onClick={IncreamentCounterButton}
+        onClick={() => dispatchIncrement(increment())}
         className="btn btn-success px-5"
       >
         +
