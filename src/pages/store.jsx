@@ -46,7 +46,7 @@ export default function Store() {
         </div>
       ) : (
         // <h5>...Loading</h5>
-        <div className="d-flex justify-content-center my-auto">
+        <div className="d-flex justify-content-center mx-auto mt-5">
           <Spinner animation="border" role="status">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
