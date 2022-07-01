@@ -19,7 +19,7 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="store/:id" element={<Details />} />
-        <Route path="/todo" element={<Todo />} />
+        {/* <Route path="/todo" element={<Todo />} /> */}
       </Routes>
     </Router>
   );
