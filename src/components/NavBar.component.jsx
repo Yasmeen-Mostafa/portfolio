@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./navbar.style.css";
 
 export default function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <nav className="navbar navbar-expand-lg sticky-top navbar-dark bg-dark p-0">
       <div className="container">
         <Link to="" className="navbar-brand">
-          Navbar
+          <div className="d-flex my-1">
+            <figure className="d-inline-block m-0">
+              <img src="./assets/logo.png" className="img-fluid" alt="" />
+            </figure>
+            <p className="d-inline-block text-white my-auto">&nbsp; Jasmeen</p>
+          </div>
         </Link>
         <button
           className="navbar-toggler"
@@ -27,23 +33,23 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link">
-                About
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link to="/store" className="nav-link">
                 Store
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/counter" className="nav-link">
-                Counter
+                Donate
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/todo" className="nav-link">
                 TODO
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/signup" className="nav-link">
+                Sign Up
               </Link>
             </li>
           </ul>

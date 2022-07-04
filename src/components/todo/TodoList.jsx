@@ -1,44 +1,49 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { deleteAction } from "../../Redux";
+import { deleteTask } from "../../Redux/features/todoRedux";
+import "./TodoList.style.css";
 const TodoList = () => {
-  const todos = useSelector((state) => state.todos);
+  const todos = useSelector((state) => state.todo.todo);
   const dispatch = useDispatch();
   const deleteTodo = (index) => {
-    dispatch(deleteAction(index));
+    dispatch(deleteTask(index));
   };
   const todosList =
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
         return (
-          <ul key={i}>
-            <li className="border d-flex">
-              <div className="text">
-                <p>Title : {todo.title}</p>
-                <p>Content : {todo.content}</p>
-              </div>
-              <button
-                className="btn btn-danger ms-auto"
-                onClick={() => {
-                  deleteTodo(i);
-                }}
-              >
-                X
-              </button>
-            </li>
-          </ul>
+          <div className="d-flex justify-content-center">
+            <ul key={i} className="w-50 p-0">
+              <li className="border d-flex items">
+                <div className=" m-2">
+                  <p className="text-start m-0">
+                    <span className="m-0 p-0 text-danger">Title: </span>
+                    <span>{todo.title}</span>
+                  </p>
+                  <p className="text-start m-0">
+                    <span className="text-danger">Content: </span>
+                    <span>{todo.content}</span>
+                  </p>
+                  {/* <p>Content : {todo.content}</p> */}
+                </div>
+                <button
+                  className="btn btn-danger ms-auto"
+                  onClick={() => {
+                    deleteTodo(i);
+                  }}
+                >
+                  X
+                </button>
+              </li>
+            </ul>
+          </div>
         );
       })
     ) : (
       <p className="h5 mx-5 text-muted">no items on the list ..</p>
     );
 
-  return (
-    <div className="text-left">
-      <h5 className="mx-5 text-muted">Todos List</h5>
-      {todosList}
-    </div>
-  );
+  return <div className="text-left mt-4">{todosList}</div>;
 };
 
 export default TodoList;

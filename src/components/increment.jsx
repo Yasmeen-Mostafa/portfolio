@@ -1,5 +1,5 @@
 import React from "react";
-import { increment } from "../Redux/features/toDo";
+import { increment } from "../Redux/features/counterRedux";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
 export default function Increment() {
   const dispatchIncrement = useDispatch();

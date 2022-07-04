@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux/es/hooks/useDispatch";
-import { decrement } from "../Redux/features/toDo";
+import { decrement } from "../Redux/features/counterRedux";
 
 export default function Decrement() {
   //trigger action
