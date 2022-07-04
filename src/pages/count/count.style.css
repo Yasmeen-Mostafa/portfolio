@@ -1,0 +1,17 @@
+.donation-icon {
+  color: #ef5261;
+}
+.donate {
+  height: 100%;
+  background-color: #e8ecf0;
+}
+h5,
+h2,
+h1,
+p {
+  color: rgb(75, 95, 111);
+  margin: 0;
+}
+.title {
+  color: rgb(153, 168, 179);
+}

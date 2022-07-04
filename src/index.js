@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from "react-redux";
 import { reduxStore } from "./Redux";
-import { configStore } from "./Redux/features/toDo";
+import { configStore } from "./Redux/features/counterRedux";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
